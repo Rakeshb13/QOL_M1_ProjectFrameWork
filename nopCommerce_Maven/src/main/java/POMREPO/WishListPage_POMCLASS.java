@@ -14,6 +14,8 @@ public class WishListPage_POMCLASS {
 	private WebElement AddtocartButton;
 	@FindBy(linkText="Email a friend")
 	private WebElement EmailafriendButton;
+	@FindBy(xpath="(//button[contains(@name,'updatecart')])[1]")
+	private WebElement Removefromcart;
 	
 	public WishListPage_POMCLASS(WebDriver driver)
 	{
@@ -35,4 +37,10 @@ public class WishListPage_POMCLASS {
 	public WebElement getEmailafriendButton() {
 		return EmailafriendButton;
 	}
+
+	public WebElement getRemovefromcart() {
+		return Removefromcart;
+	}
+
+	
 }

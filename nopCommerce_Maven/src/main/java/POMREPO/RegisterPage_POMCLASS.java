@@ -30,11 +30,13 @@ import org.openqa.selenium.support.PageFactory;
 	private WebElement ConfirmpasswordTextField;
 	@FindBy(id="register-button")
 	private WebElement RegisterButton;
+	@FindBy(xpath="//div[@class='result']")
+	private WebElement expText;
 	
 	public RegisterPage_POMCLASS(WebDriver driver) {
-	PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);
 	}
-
+	
 	public WebElement getMaleRadioButton() {
 		return MaleRadioButton;
 	}
@@ -83,7 +85,10 @@ import org.openqa.selenium.support.PageFactory;
 		return RegisterButton;
 	}
 
-	
+	public WebElement getExpText() {
+		return expText;
+	}
+
 	
 }
 

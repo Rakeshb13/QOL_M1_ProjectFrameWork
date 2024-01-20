@@ -12,14 +12,17 @@ public class BooksPage_POMCLASS {
 	private WebElement productName2;
 	@FindBy(linkText="Pride and Prejudice")
 	private WebElement productName3;
-	@FindBy(linkText="Add to cart")
-	private WebElement AddtocartButton;
-	@FindBy(linkText="Add to wishlist")
-	private WebElement AddtowishlistButton;
+	@FindBy(xpath="(//button[text()='Add to cart'])[1]")
+	private WebElement AddtocartButton1;
+	@FindBy(xpath="(//button[text()='Add to cart'])[2]")
+	private WebElement AddtocartButton2;
+	@FindBy(xpath="(//button[text()='Add to cart'])[3]")
+	private WebElement AddtocartButton3;
+	@FindBy(id="add-to-wishlist-button-38")
+	private WebElement Addtowishlist;
 	
-	public BooksPage_POMCLASS(WebDriver driver)
-	{
-		PageFactory.initElements(driver, this);
+	public BooksPage_POMCLASS(WebDriver driver) {
+	PageFactory.initElements(driver, this);
 	}
 
 	public WebElement getProductName() {
@@ -34,13 +37,23 @@ public class BooksPage_POMCLASS {
 		return productName3;
 	}
 
-	public WebElement getAddtocartButton() {
-		return AddtocartButton;
+	public WebElement getAddtocartButton1() {
+		return AddtocartButton1;
 	}
 
-	public WebElement getAddtowishlistButton() {
-		return AddtowishlistButton;
+	public WebElement getAddtocartButton2() {
+		return AddtocartButton2;
 	}
+
+	public WebElement getAddtocartButton3() {
+		return AddtocartButton3;
+	}
+
+	public WebElement getAddtowishlist() {
+		return Addtowishlist;
+	}
+	
+	
 	
 
 }

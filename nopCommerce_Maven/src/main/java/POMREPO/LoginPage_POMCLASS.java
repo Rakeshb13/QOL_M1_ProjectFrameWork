@@ -10,7 +10,7 @@ public class LoginPage_POMCLASS {
 	private WebElement emailTextField;
 	@FindBy(id="Password")
 	private WebElement passwordTextField;
-	@FindBy(partialLinkText="Log in")
+	@FindBy(xpath="//button[text()='Log in']")
 	private WebElement LoginButton;
 	
 	public LoginPage_POMCLASS(WebDriver driver)

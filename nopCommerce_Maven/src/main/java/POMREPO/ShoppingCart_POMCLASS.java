@@ -10,6 +10,12 @@ public class ShoppingCart_POMCLASS {
 	private WebElement productName1;
 	@FindBy(linkText="First Prize Pies")
 	private WebElement productName2;
+	@FindBy(xpath="(//td[@class='remove-from-cart'])[1]")
+	private WebElement productRemoveButton1;
+	@FindBy(xpath="(//td[@class='remove-from-cart'])[2]")
+	private WebElement productRemoveButton2;
+	@FindBy(xpath="(//td[@class='remove-from-cart'])[3]")
+	private WebElement productRemoveButton3;
 	@FindBy(id="updatecart")
 	private WebElement UpadateShoppingCartButton;
 	@FindBy(linkText="Continue shopping")
@@ -28,53 +34,91 @@ public class ShoppingCart_POMCLASS {
 	private WebElement TandCcheckBox;
 	@FindBy(id="checkout")
 	private WebElement CheckoutButton;
+	@FindBy(xpath="//div[@class='no-data']")
+	private WebElement getEmptyCartMessage;
+	
 	
 	public ShoppingCart_POMCLASS(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
 
+
 	public WebElement getProductName1() {
 		return productName1;
 	}
+
 
 	public WebElement getProductName2() {
 		return productName2;
 	}
 
+
+	public WebElement getProductRemoveButton1() {
+		return productRemoveButton1;
+	}
+
+
+	public WebElement getProductRemoveButton2() {
+		return productRemoveButton2;
+	}
+
+
+	public WebElement getProductRemoveButton3() {
+		return productRemoveButton3;
+	}
+
+
 	public WebElement getUpadateShoppingCartButton() {
 		return UpadateShoppingCartButton;
 	}
+
 
 	public WebElement getContinueShoppingcartButton() {
 		return ContinueShoppingcartButton;
 	}
 
+
 	public WebElement getEstimateShoppingcartButton() {
 		return EstimateShoppingcartButton;
 	}
+
 
 	public WebElement getGiftwrappingBox() {
 		return GiftwrappingBox;
 	}
 
+
 	public WebElement getDiscountCodeTextBox() {
 		return DiscountCodeTextBox;
 	}
+
 
 	public WebElement getGiftcardTextBox() {
 		return GiftcardTextBox;
 	}
 
+
 	public WebElement getAddgiftcardButton() {
 		return AddgiftcardButton;
 	}
+
 
 	public WebElement getTandCcheckBox() {
 		return TandCcheckBox;
 	}
 
+
 	public WebElement getCheckoutButton() {
 		return CheckoutButton;
 	}
+
+
+	public WebElement getGetEmptyCartMessage() {
+		return getEmptyCartMessage;
+	}
+
+	
+	
+
 }

@@ -39,9 +39,9 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void logout() {
-		driver.findElement(By.linkText("Log out")).click();
+		driver.findElement(By.xpath("//a[text()='Log out']")).click();
 	}
-	
+
 	@AfterClass(alwaysRun=true)
 	public void closeBrowser() {
 		driver.close();
