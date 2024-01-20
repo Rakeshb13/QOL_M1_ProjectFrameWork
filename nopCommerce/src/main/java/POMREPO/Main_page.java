@@ -25,7 +25,7 @@ public class Main_page {
 	@FindBy(xpath="((//a[text()='Digital downloads '])[1]")
 	private WebElement digital_Download_Link;
 	
-	@FindBy(xpath="((//a[text()='Books '])[1]")
+	@FindBy(xpath="/html/body/div[6]/div[2]/ul[1]/li[5]/a")
 	private WebElement books_Link;
 	
 	@FindBy(xpath="((//a[text()='Jewelry '])[1]")
